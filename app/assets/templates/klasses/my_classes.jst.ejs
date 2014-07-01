@@ -1,0 +1,12 @@
+<h1>My Classes</h1>
+<ul>
+  <% for(var i=0; i<my_classes.models.length; i++) { %>
+    <li>
+      <h3>
+        <a href='#/classes/<%= my_classes.models[i].escape("id") %>'>
+          <%= my_classes.models[i].escape("name") %>
+        </a>
+      </h3>
+    </li>
+  <% } %>
+</ul>

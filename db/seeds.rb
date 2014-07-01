@@ -1,0 +1,47 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+ActiveRecord::Base.transaction do
+  s1 = Student.create!({:user_name => "student1", :password => "111111", :email => "student1@llu.edu"})
+  s2 = Student.create!({:user_name => "student2", :password => "111111", :email => "student2@llu.edu"})
+  s3 = Student.create!({:user_name => "student3", :password => "111111", :email => "student3@llu.edu"})
+  c1 = Klass.create!({:name => "Class1"})
+  c2 = Klass.create!({:name => "Class2"})
+  c3 = Klass.create!({:name => "Class3"})
+  c4 = Klass.create!({:name => "Class4"})
+  sc1 = StudentKlass.create!({:student_id => 1, :klass_id => 1})
+  sc2 = StudentKlass.create!({:student_id => 2, :klass_id => 1})
+  sc3 = StudentKlass.create!({:student_id => 3, :klass_id => 1})
+  sc7 = StudentKlass.create!({:student_id => 1, :klass_id => 2})
+  sc8 = StudentKlass.create!({:student_id => 3, :klass_id => 2})
+  sc10 = StudentKlass.create!({:student_id => 2, :klass_id => 3})
+  sc13 = StudentKlass.create!({:student_id => 1, :klass_id => 4})
+  a1 = Assignment.create!({:name => "Assignment1", :klass_id => 1})
+  a2 = Assignment.create!({:name => "Assignment2", :klass_id => 1})
+  a3 = Assignment.create!({:name => "Assignment3", :klass_id => 1})
+  a4 = Assignment.create!({:name => "Assignment4", :klass_id => 1})
+  a5 = Assignment.create!({:name => "Assignment5", :klass_id => 1})
+  a6 = Assignment.create!({:name => "Assignment6", :klass_id => 2})
+  sa1 = StudentAssignment.create!({:student_id => 1, :assignment_id => 1})
+  sa2 = StudentAssignment.create!({:student_id => 2, :assignment_id => 1})
+  sa3 = StudentAssignment.create!({:student_id => 3, :assignment_id => 1})
+  sa4 = StudentAssignment.create!({:student_id => 1, :assignment_id => 2})
+  sa5 = StudentAssignment.create!({:student_id => 2, :assignment_id => 2})
+  sa6 = StudentAssignment.create!({:student_id => 3, :assignment_id => 2})
+  sa7 = StudentAssignment.create!({:student_id => 1, :assignment_id => 3})
+  sa8 = StudentAssignment.create!({:student_id => 2, :assignment_id => 3})
+  sa9 = StudentAssignment.create!({:student_id => 3, :assignment_id => 3})
+  sa10 = StudentAssignment.create!({:student_id => 1, :assignment_id => 4})
+  sa11 = StudentAssignment.create!({:student_id => 2, :assignment_id => 4})
+  sa12 = StudentAssignment.create!({:student_id => 3, :assignment_id => 4})
+  sa13 = StudentAssignment.create!({:student_id => 1, :assignment_id => 5})
+  sa14 = StudentAssignment.create!({:student_id => 2, :assignment_id => 5})
+  sa15 = StudentAssignment.create!({:student_id => 3, :assignment_id => 5})
+  sa16 = StudentAssignment.create!({:student_id => 1, :assignment_id => 6})
+  sa17 = StudentAssignment.create!({:student_id => 3, :assignment_id => 6})
+end

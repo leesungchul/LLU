@@ -1,0 +1,2 @@
+module StudentKlassesHelper
+end

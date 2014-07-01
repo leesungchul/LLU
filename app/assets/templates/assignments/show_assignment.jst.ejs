@@ -1,0 +1,15 @@
+<h1><%= assignment.escape("name") %></h1>
+<p>Assignment Status: <%= status.get('status') %></p>
+<% if (status.get('status') === "Open") { %>
+  Question1: <input type="text">
+  <br/>
+  Question2: <input type="text">
+  <br/>
+  Question3: <input type="text">
+  <br/>
+  <button type="button" class="btn btn-primary"id="submit-assignment">Submit</button>
+<% } else { %>
+  You have submitted <%= assignment.escape("name") %>
+  <br/>
+  <a href="#/classes/<%=assignment.escape('klass_id')%>">Go back to list of assignments</a>
+<% } %>

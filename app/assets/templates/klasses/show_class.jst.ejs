@@ -1,0 +1,14 @@
+<h1><%= klass.escape("name") %></h1>
+<h4>Assignments</h4>
+<ul>
+  <% for(var i=0; i<assignments.length; i++) { %>
+    <li>
+      <h3>
+        <a href='#/assignments/<%= assignments[i].id %>'>
+          <%= assignments[i].name %>
+        </a>
+        Status: <%= status.findWhere({assignment_id: assignments[i].id}).escape("status") %>
+      </h3>
+    </li>
+  <% } %>
+</ul>
